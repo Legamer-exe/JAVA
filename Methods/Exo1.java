@@ -1,8 +1,7 @@
-public class Addition {
+public class Exo1 {
     private int a;
     private int b;
-
-    public Addition(int a, int b) {
+    public Exo1(int a, int b) {
         this.a = a;
         this.b = b;
     }
@@ -12,7 +11,7 @@ public class Addition {
     }
 
     public static void main(String[] args) {
-        Addition addition = new Addition(5, 7);
-        System.out.println("La somme est : " + addition.calculerSomme());
+        Exo1 addition = new Exo1(5, 7);
+        System.out.println("la some est : " + addition.calculerSomme());
     }
 }
