@@ -1,4 +1,4 @@
-public class Personne {
+public class Exo2 {
     private String nom;
     protected int age;
     String adresse;
