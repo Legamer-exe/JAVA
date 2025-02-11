@@ -3,6 +3,12 @@ public class Exo2 {
     protected int age;
     String adresse;
 
+    public Personne(String nom, int age, String adresse) {
+        this.nom = nom;
+        this.age = age;
+        this.adresse = adresse;
+    }
+
     public void afficherNom() {
         System.out.println("Nom : " + nom);
     }
@@ -18,20 +24,20 @@ public class Exo2 {
     void afficherAdresse() {
         System.out.println("Adresse : " + adresse);
     }
-}
 
-public class Main {
     public static void main(String[] args) {
-        Personne personne = new Personne();
+        Personne personne = new Personne("Dupont", 30, "123 Rue Exemple");
         personne.afficherNom();
         personne.afficherAdresse();
     }
 }
 
-public class TestVisibilite {
+public class TestPersonne {
     public static void main(String[] args) {
-        Personne personne = new Personne();
-        personne.afficherNom();
-        personne.afficherAdresse();
+        Personne personne = new Personne("Martin", 25, "456 Rue Test");
+        personne.afficherNom(); // Accessible car publique
+        // personne.changerNom("Nouveau Nom"); // Non accessible car privée
+        personne.afficherAge(); // Accessible car protégée (dans le même package)
+        personne.afficherAdresse(); // Accessible car package-private (dans le même package)
     }
 }

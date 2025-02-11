@@ -1,4 +1,5 @@
-public class Exo3 {
+public class Calculatrice {
+
     public int add(int a, int b) {
         return a + b;
     }
@@ -34,9 +35,6 @@ public class Exo3 {
     public double effectuerOperation(String operation, double a, double b) {
         switch (operation) {
             case "add":
-                if (a == 42 && b == 42) {
-                    System.out.println("https://www.youtube.com/watch?v=xvFZjo5PgG0");
-                }
                 return add(a, b);
             case "sous":
                 return sous(a, b);
@@ -44,17 +42,20 @@ public class Exo3 {
                 return multi(a, b);
             case "divid":
                 return divid(a, b);
+            case "easteregg":
+                System.out.println("Vous avez trouvé l'easter egg !");
+                return 0;
             default:
-                throw new IllegalArgumentException("Opération inconnue : " + operation);
+                return 0;
         }
     }
 
     public static void main(String[] args) {
         Calculatrice calc = new Calculatrice();
-        System.out.println("Addition : " + calc.effectuerOperation("add", 5.0, 3.0));
-        System.out.println("Soustraction : " + calc.effectuerOperation("sous", 5.0, 3.0));
-        System.out.println("Multiplication : " + calc.effectuerOperation("multi", 5.0, 3.0));
-        System.out.println("Division : " + calc.effectuerOperation("divid", 6.0, 3.0));
-        System.out.println("Easter Egg Test : " + calc.effectuerOperation("add", 42.0, 42.0));
+        System.out.println("Addition : " + calc.effectuerOperation("add", 5.5, 2.2));
+        System.out.println("Soustraction : " + calc.effectuerOperation("sous", 10.0, 4.5));
+        System.out.println("Multiplication : " + calc.effectuerOperation("multi", 3.3, 3.0));
+        System.out.println("Division : " + calc.effectuerOperation("divid", 10.0, 2.0));
+        calc.effectuerOperation("easteregg", 0, 0);
     }
 }
