@@ -24,7 +24,7 @@ class Ariane6 extends Fusee {
     }
 }
 
-public class Ariane6Lancement {
+public class Exo6 {
     public static void main(String[] args) {
         Ariane6 ariane6 = new Ariane6(500000.0);
         System.out.println("Fusée " + ariane6.nom + " créée, Poids : " + ariane6.poids + " kg.");
