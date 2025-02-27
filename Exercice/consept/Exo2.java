@@ -6,7 +6,7 @@ class Voiture {
     public Voiture(String modele, String couleur, double prix) {
         this.modele = modele;
         this.couleur = couleur;
-        setPrix(prix);
+        this.setPrix(prix);
     }
 
     public String getModele() {
@@ -30,12 +30,22 @@ class Voiture {
     }
 
     public void setPrix(double prix) {
-        if (prix > 0) {
-            this.prix = prix;
-        }
+        this.prix = Math.max(0,prix);
     }
 
     public void afficherDetails() {
         System.out.println("Modèle: " + modele + ", Couleur: " + couleur + ", Prix: " + prix);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+

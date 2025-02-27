@@ -18,6 +18,7 @@ class Rectangle extends Forme {
         this.largeur = largeur;
         this.hauteur = hauteur;
     }
+
     double calculerSurface() {
         return largeur * hauteur;
     }

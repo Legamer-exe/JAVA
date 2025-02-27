@@ -11,19 +11,16 @@ class Mammifere extends Animal {
         super(nom);
     }
     void seDeplacer() {
-        System.out.println(nom + " marche.");
+        System.out.println(nom + this.marcher());
     }
-    void marcher() {
-        System.out.println(nom + " marche sur ses pattes.");
+    String marcher() {
+        return "marche sur ses pattes.";
     }
 }
 
 class Oiseau extends Animal {
     Oiseau(String nom) {
         super(nom);
-    }
-    void seDeplacer() {
-        System.out.println(nom + " vole.");
     }
     void voler() {
         System.out.println(nom + " bat des ailes et vole.");
@@ -34,7 +31,7 @@ class Reptile extends Animal {
     Reptile(String nom) {
         super(nom);
     }
-    void seDeplacer() {
+    void ramper() {
         System.out.println(nom + " rampe.");
     }
 }
